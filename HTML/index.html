@@ -27,6 +27,72 @@
     <!-- CUSTOMIZATONS -->
     <style>
 
+        @keyframes morph {
+            0%, 100% {
+                border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+            }
+
+            33% {
+                border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+            }
+
+            66% {
+                border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+            }
+        }
+
+        /* Mobiles */
+        @media (min-width:300px)  {             
+            .blob{
+                overflow: hidden;
+                width: 6rem;
+                height: 6rem;
+                border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+                background: #38F23C url(images/profile_image.png);
+                background-size: cover;
+                background-position: center;
+                animation: morph 3.75s linear infinite;
+                margin: 0 auto;
+                margin-bottom: 13px;
+            } 
+        }
+
+        /* Tablets */
+        @media screen and (min-width: 768px) {
+            
+            .blob{
+                overflow: hidden;
+                width: 9rem;
+                height: 9rem;
+                border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+                background: #38F23C url(images/profile_image.png);
+                background-size: cover;
+                background-position: center;
+                animation: morph 3.75s linear infinite;
+                margin: 0 auto;
+                margin-bottom: 13px;
+            }
+            
+        }
+
+        /* DESKTOPS */
+        @media screen and (min-width: 1200px) {
+            
+            .blob{
+                overflow: hidden;
+                width: 9rem;
+                height: 9rem;
+                border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+                background: #38F23C url(images/profile_image.png);
+                background-size: cover;
+                background-position: center;
+                animation: morph 3.75s linear infinite;
+                margin: 0 auto;
+                margin-bottom: 13px;
+            }
+                
+        }
+
 		/* BODY BACKGROUND */
 		body { background-color: #29323c; /* fallback for old browsers */
 
@@ -49,7 +115,7 @@
         <div class="content">
             
             <!-- PROFILE IMAGE -->
-            <img class="profile-image rounded" src="images/about-boy.jpg" alt="profile image of Adam"/>
+            <img class="blob" src="images/profile_image.png" alt="profile image of Adam"/>
             
             <!-- TITLE -->
             <h1>
